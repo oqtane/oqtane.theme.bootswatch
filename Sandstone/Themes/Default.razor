@@ -1,0 +1,19 @@
+﻿@namespace Oqtane.Theme.Bootswatch.Sandstone
+@inherits Oqtane.Theme.Bootswatch.Default.Default
+
+@{ 
+    base.BuildRenderTree(__builder); 
+}
+
+@code {
+
+    public override List<Resource> Resources => GetResources();
+
+    private List<Resource> GetResources()
+    {
+        var resources = base.Resources;
+        resources[0] = new Resource { ResourceType = ResourceType.Stylesheet, Url = ThemePath().Replace(".Sandstone/", "/Sandstone.css") };
+        resources[1] = new Resource { ResourceType = ResourceType.Stylesheet, Url = ThemePath().Replace(".Sandstone/", "/Theme.css") };
+        return resources;
+    } 
+}
