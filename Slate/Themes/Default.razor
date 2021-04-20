@@ -1,0 +1,19 @@
+﻿@namespace Oqtane.Theme.Bootswatch.Slate
+@inherits Oqtane.Theme.Bootswatch.Default.Default
+
+@{ 
+    base.BuildRenderTree(__builder);
+}
+
+@code {
+
+    public override List<Resource> Resources => GetResources();
+
+    private List<Resource> GetResources()
+    {
+        var resources = base.Resources;
+        resources[0] = new Resource { ResourceType = ResourceType.Stylesheet, Url = ThemePath().Replace(".Slate/", "/Slate.css") };
+        resources[1] = new Resource { ResourceType = ResourceType.Stylesheet, Url = ThemePath().Replace(".Slate/", "/Theme.css") };
+        return resources;
+    }
+}
