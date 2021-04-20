@@ -3,20 +3,20 @@
   <metadata>
     <id>Oqtane.Theme.Bootswatch</id>
     <version>1.0.0</version>
-    <authors>Shaun Walker</authors>
+    <authors>Grayson Walker</authors>
     <owners>.NET Foundation</owners>
     <title>Oqtane Bootswatch Theme</title>
-    <description>A Custom Theme for the Oqtane Framework based on Bootswatch</description>
+    <description>A collection of themes based on Bootswatch</description>
     <copyright>.NET Foundation</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <license type="expression">MIT</license>
-    <projectUrl>https://github.com/oqtane/oqtane.theme.custom</projectUrl>
+    <projectUrl>https://github.com/oqtane/oqtane.theme.bootswatch</projectUrl>
     <iconUrl>https://www.oqtane.org/Portals/0/icon.jpg</iconUrl>
     <tags>oqtane theme</tags>
     <releaseNotes></releaseNotes>
     <summary></summary>
     <dependencies>
-      <dependency id="Oqtane.Framework" version="2.0.0" />
+      <dependency id="Oqtane.Framework" version="2.0.2" />
     </dependencies>
   </metadata>
   <files>
