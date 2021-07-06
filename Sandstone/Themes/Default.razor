@@ -12,8 +12,9 @@
     private List<Resource> GetResources()
     {
         var resources = base.Resources;
-        resources[0] = new Resource { ResourceType = ResourceType.Stylesheet, Url = ThemePath().Replace(".Sandstone/", "/Sandstone.css") };
+        resources[0] = new Resource { ResourceType = ResourceType.Stylesheet, Url = "https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.0.2/sandstone/bootstrap.min.css", Integrity = "sha512-vKQkYBxgn7QPg9pJJML1NT6HKNySAU3cmLX2t32/PYRfm/H2wzdNMAltzBemHcg8fdD1ZfnqFl8YHgylPyPYYg==", CrossOrigin = "anonymous" };
         resources[1] = new Resource { ResourceType = ResourceType.Stylesheet, Url = ThemePath().Replace(".Sandstone/", "/Theme.css") };
+        resources[2] = new Resource { ResourceType = ResourceType.Stylesheet, Url = ThemePath().Replace(".Sandstone/", "/Sandstone.css") };
         return resources;
-    } 
+    }
 }

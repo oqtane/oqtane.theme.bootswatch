@@ -12,8 +12,9 @@
     private List<Resource> GetResources()
     {
         var resources = base.Resources;
-        resources[0] = new Resource { ResourceType = ResourceType.Stylesheet, Url = ThemePath().Replace(".Cerulean/", "/Cerulean.css") };
+        resources[0] = new Resource { ResourceType = ResourceType.Stylesheet, Url = "https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.0.2/cerulean/bootstrap.min.css", Integrity = "sha512-yTmD3eVCm6omGDRFz3vcOdjVhZoX6F3kFgyIGno1c4JQ3PWeSRhB5MaKR6TVb9B4TnHRlrYMy+pFMRJiPJ0bLA==", CrossOrigin = "anonymous" };
         resources[1] = new Resource { ResourceType = ResourceType.Stylesheet, Url = ThemePath().Replace(".Cerulean/", "/Theme.css") };
+        resources[2] = new Resource { ResourceType = ResourceType.Stylesheet, Url = ThemePath().Replace(".Cerulean/", "/Cerulean.css") };
         return resources;
     }
 }

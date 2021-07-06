@@ -12,8 +12,9 @@
     private List<Resource> GetResources()
     {
         var resources = base.Resources;
-        resources[0] = new Resource { ResourceType = ResourceType.Stylesheet, Url = ThemePath().Replace(".Sketchy/", "/Sketchy.css") };
+        resources[0] = new Resource { ResourceType = ResourceType.Stylesheet, Url = "https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.0.2/sketchy/bootstrap.min.css", Integrity = "sha512-2GcSNOCUZR36TLjO0B1GyFqk//acaWa0u/zxbB6UKhha28n9TtEiiwtTRVHRGbr059eVRKvSCyk2mCXocmtpHg==", CrossOrigin = "anonymous" };
         resources[1] = new Resource { ResourceType = ResourceType.Stylesheet, Url = ThemePath().Replace(".Sketchy/", "/Theme.css") };
+        resources[2] = new Resource { ResourceType = ResourceType.Stylesheet, Url = ThemePath().Replace(".Sketchy/", "/Sketchy.css") };
         return resources;
     }
 }

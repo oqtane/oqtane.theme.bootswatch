@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>Oqtane.Theme.Bootswatch</id>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <authors>Grayson Walker</authors>
     <owners>.NET Foundation</owners>
     <title>Oqtane Bootswatch Theme</title>
@@ -11,16 +11,17 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <license type="expression">MIT</license>
     <projectUrl>https://github.com/oqtane/oqtane.theme.bootswatch</projectUrl>
-    <iconUrl>https://www.oqtane.org/Portals/0/icon.jpg</iconUrl>
+    <icon>icon.png</icon>
     <tags>oqtane theme</tags>
     <releaseNotes></releaseNotes>
     <summary></summary>
     <dependencies>
-      <dependency id="Oqtane.Framework" version="2.0.2" />
+      <dependency id="Oqtane.Framework" version="2.2.0" />
     </dependencies>
   </metadata>
   <files>
     <file src="bin\Release\net5.0\Oqtane.Theme.Bootswatch.Oqtane.dll" target="lib\net5.0" />
     <file src="wwwroot\**\*.*" target="wwwroot" /> 
+    <file src="icon.png" target="" />
   </files>
 </package>
