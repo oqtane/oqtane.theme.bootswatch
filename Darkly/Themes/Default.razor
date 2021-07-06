@@ -12,8 +12,9 @@
     private List<Resource> GetResources()
     {
         var resources = base.Resources;
-        resources[0] = new Resource { ResourceType = ResourceType.Stylesheet, Url = ThemePath().Replace(".Darkly/", "/Darkly.css") };
+        resources[0] = new Resource { ResourceType = ResourceType.Stylesheet, Url = "https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.0.2/darkly/bootstrap.min.css", Integrity = "sha512-KREAPYEoSKKkg2oqvahwsfZkMDfFe1i5G4cL/1y0xdAauwjoO5nNe6jdY2pEiNdh0Dqs39Pnilq7Zbl3e0FjGw==", CrossOrigin = "anonymous" };
         resources[1] = new Resource { ResourceType = ResourceType.Stylesheet, Url = ThemePath().Replace(".Darkly/", "/Theme.css") };
+        resources[2] = new Resource { ResourceType = ResourceType.Stylesheet, Url = ThemePath().Replace(".Darkly/", "/Darkly.css") };
         return resources;
     }
 }
