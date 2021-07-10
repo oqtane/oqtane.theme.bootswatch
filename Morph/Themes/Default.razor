@@ -1,0 +1,20 @@
+﻿@namespace Oqtane.Theme.Bootswatch.Morph
+@inherits Oqtane.Theme.Bootswatch.Default.Default
+
+@{ 
+    base.BuildRenderTree(__builder); 
+}
+
+@code {
+
+    public override List<Resource> Resources => GetResources();
+
+    private List<Resource> GetResources()
+    {
+        var resources = base.Resources;
+        resources[0] = new Resource { ResourceType = ResourceType.Stylesheet, Url = "https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.0.2/morph/bootstrap.min.css", Integrity = "sha512-ZOEMfJac7enkyGovc+OFcqGo5A35ydWAA5kLlcQtjJWFRnTDX4OW2U80pmD5Eg5kvvV+X+agCqh7cYQgidfOPQ==", CrossOrigin = "anonymous" };
+        resources[1] = new Resource { ResourceType = ResourceType.Stylesheet, Url = ThemePath().Replace(".Morph/", "/Theme.css") };
+        resources[2] = new Resource { ResourceType = ResourceType.Stylesheet, Url = ThemePath().Replace(".Morph/", "/Morph.css") };
+        return resources;
+    }
+}
