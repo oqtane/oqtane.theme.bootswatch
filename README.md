@@ -62,9 +62,17 @@ A sample of what the various themes look like is shown below:
 
 ![Minty](Screenshots/Minty.png)
 
+### Morph
+
+![Morph](Screenshots/Morph.png)
+
 ### Pulse
 
 ![Pulse](Screenshots/Pulse.png)
+
+### Quartz
+
+![Quartz](Screenshots/Quartz.png)
 
 ### Sandstone
 
@@ -98,6 +106,14 @@ A sample of what the various themes look like is shown below:
 
 ![United](Screenshots/United.png)
 
+### Vapor
+
+![Vapor](Screenshots/Vapor.png)
+
 ### Yeti
 
 ![Yeti](Screenshots/Yeti.png)
+
+### Zephyr
+
+![Zephyr](Screenshots/Zephyr.png)
