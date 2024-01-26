@@ -20,7 +20,7 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="bin\Release\net5.0\Oqtane.Theme.Bootswatch.Oqtane.dll" target="lib\net5.0" />
+    <file src="bin\Release\net8.0\Oqtane.Theme.Bootswatch.Oqtane.dll" target="lib\net8.0" />
     <file src="wwwroot\**\*.*" target="wwwroot" /> 
     <file src="icon.png" target="" />
   </files>
