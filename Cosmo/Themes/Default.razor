@@ -12,7 +12,13 @@
     private List<Resource> GetResources()
     {
         var resources = base.Resources;
-        resources[0] = new Resource { ResourceType = ResourceType.Stylesheet, Url = "https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.0.2/cosmo/bootstrap.min.css", Integrity = "sha512-61f8/6Z0HBl96abjaKeob5XiSSCD4W8ZoElkIF8uvaekvpNCLa9u6TDLE5/Y7FWQCIHXWEfD3TYE9TzUbaBaNw==", CrossOrigin = "anonymous" };
+        resources[0] = new Resource
+            {
+                ResourceType = ResourceType.Stylesheet,
+                Url = "https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.3.3/cosmo/bootstrap.min.css",
+                Integrity = "sha512-PU+mnI7iaSDt/G/adHVcQOX2I+K3bQ27kwHJQ1rPq5iqQvHuHSdJOUU/TmPcUsyUGrfAxK+Z4rnx/SL+qCmBNQ==",
+                CrossOrigin = "anonymous"
+            }; 
         resources[1] = new Resource { ResourceType = ResourceType.Stylesheet, Url = ThemePath().Replace(".Cosmo/", "/Theme.css") };
         resources[2] = new Resource { ResourceType = ResourceType.Stylesheet, Url = ThemePath().Replace(".Cosmo/", "/Cosmo.css") };
         return resources;

@@ -90,7 +90,7 @@
         }
         catch (Exception ex)
         {
-            ModuleInstance.AddModuleMessage(ex.Message, MessageType.Error);
+            AddModuleMessage(ex.Message, MessageType.Error);
         }
     }
 
@@ -98,7 +98,7 @@
     {
         try
         {
-            var settings = ModuleState.Settings;
+            var settings = await SettingService.GetModuleSettingsAsync(ModuleState.ModuleId);
             settings = SettingService.SetSetting(settings, "Oqtane.Theme.Bootswatch:Title", _title);
             settings = SettingService.SetSetting(settings, "Oqtane.Theme.Bootswatch:Background", _background);
             settings = SettingService.SetSetting(settings, "Oqtane.Theme.Bootswatch:Text", _text);
@@ -107,7 +107,7 @@
         }
         catch (Exception ex)
         {
-            ModuleInstance.AddModuleMessage(ex.Message, MessageType.Error);
+            AddModuleMessage(ex.Message, MessageType.Error);
         }
     }
 }

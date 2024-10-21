@@ -12,7 +12,13 @@
     private List<Resource> GetResources()
     {
         var resources = base.Resources;
-        resources[0] = new Resource { ResourceType = ResourceType.Stylesheet, Url = "https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.0.2/flatly/bootstrap.min.css", Integrity = "sha512-9MmHg28DhjKwWGDpuNCHK45mO9w7V20sx75eaJoyVvjw1q/YpAxfRaxEsQHbdzw6aQqcmqWe5UGTjgtpb7b7og==", CrossOrigin = "anonymous" };
+        resources[0] = new Resource
+            {
+                ResourceType = ResourceType.Stylesheet,
+                Url = "https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.3.3/flatly/bootstrap.min.css",
+                Integrity = "sha512-qoT4KwnRpAQ9uczPsw7GunsNmhRnYwSlE2KRCUPRQHSkDuLulCtDXuC2P/P6oqr3M5hoGagUG9pgHDPkD2zCDA==",
+                CrossOrigin = "anonymous"
+            };
         resources[1] = new Resource { ResourceType = ResourceType.Stylesheet, Url = ThemePath().Replace(".Flatly/", "/Theme.css") };
         resources[2] = new Resource { ResourceType = ResourceType.Stylesheet, Url = ThemePath().Replace(".Flatly/", "/Flatly.css") };
         return resources;

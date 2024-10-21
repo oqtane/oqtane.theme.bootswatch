@@ -12,7 +12,13 @@
     private List<Resource> GetResources()
     {
         var resources = base.Resources;
-        resources[0] = new Resource { ResourceType = ResourceType.Stylesheet, Url = "https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.0.2/solar/bootstrap.min.css", Integrity = "sha512-riiuLrjNXT42ink4OJeyChsuOlZlZK+dK4lY59xrVt3uuT5W8Yls8WLcopofKJoyTmwJyCaK9fHXY3vGvR9x4w==", CrossOrigin = "anonymous" };
+        resources[0] = new Resource
+            {
+                ResourceType = ResourceType.Stylesheet,
+                Url = "https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.3.3/solar/bootstrap.min.css",
+                Integrity = "sha512-0BjJSwKzc+sx3vM/B9nEU98M/hCLM2bcIWrzGe9fqJZFVicDjxu2vrHd0/7ildD+23p5JsQNo8IEL+sOb+A1iw==",
+                CrossOrigin = "anonymous"
+            };
         resources[1] = new Resource { ResourceType = ResourceType.Stylesheet, Url = ThemePath().Replace(".Solar/", "/Theme.css") };
         resources[2] = new Resource { ResourceType = ResourceType.Stylesheet, Url = ThemePath().Replace(".Solar/", "/Solar.css") };
         return resources;

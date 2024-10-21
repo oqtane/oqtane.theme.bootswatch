@@ -1,7 +1,13 @@
-﻿
+﻿/* Oqtane Styles */
 
 body {
     padding-top: 7rem;
+}
+
+/* App Logo */
+.app-logo .img-fluid {
+    max-height: 90px;
+    padding: 0 5px 0 5px;
 }
 
 .table > :not(caption) > * > * {
@@ -12,12 +18,14 @@ body {
     background-color: #ffffff !important;
     border-width: 0.5px !important;
     border-bottom-color: #ccc !important;
+    color: #000 !important;
 }
 
 .table .form-select {
     background-color: #ffffff !important;
     border-width: 0.5px !important;
     border-bottom-color: #ccc !important;
+    color: #000 !important;
 }
 
 .table .btn-primary {
@@ -42,26 +50,27 @@ body {
 .app-menu .nav-item {
     font-size: 0.9rem;
     padding-bottom: 0.5rem;
+    white-space: nowrap;
 }
 
-.app-menu .nav-item a {
-    border-radius: 4px;
-    height: 3rem;
-    display: flex;
-    align-items: center;
-    line-height: 3rem;
-    padding-left: 1rem;
-}
+    .app-menu .nav-item a {
+        border-radius: 4px;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        line-height: 3rem;
+        padding-left: 1rem;
+    }
 
-.app-menu .nav-item a.active {
-    background-color: rgba(255,255,255,0.25);
-    color: white;
-}
+        .app-menu .nav-item a.active {
+            background-color: rgba(255,255,255,0.25);
+            color: white;
+        }
 
-.app-menu .nav-item a:hover {
-    background-color: rgba(255,255,255,0.1);
-    color: white;
-}
+        .app-menu .nav-item a:hover {
+            background-color: rgba(255,255,255,0.1);
+            color: white;
+        }
 
 .app-menu .nav-link .oi {
     width: 1.5rem;
@@ -70,15 +79,19 @@ body {
     top: -2px;
 }
 
+.app-search input {
+    width: auto;
+}
+
 .navbar-toggler {
     background-color: rgba(255, 255, 255, 0.1);
     margin: .5rem;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 767.98px) {
 
     .app-menu {
-        width: 100%
+        width: 100%;
     }
 
     .navbar {
@@ -105,4 +118,48 @@ body {
         position: relative;
         top: 60px;
     }
+
+    .app-search {
+        border-radius: 6px;
+    }
+
+        .app-search input {
+            display: none !important;
+        }
+
+            .app-search input + button {
+                position: initial;
+                padding-top: 7px;
+                padding-bottom: 7px;
+            }
+
+        .app-search:active, .app-search:hover {
+            display: block;
+            position: fixed;
+            top: 0;
+            min-height: 60px;
+            width: 100%;
+            left: 0;
+            z-index: 999;
+            border-radius: 0;
+        }
+
+            .app-search:active .app-form-inline, .app-search:hover .app-form-inline {
+                margin: 10px auto;
+                position: relative;
+                display: block;
+                max-width: 80%;
+            }
+
+                .app-search:active .app-form-inline input, .app-search:hover .app-form-inline input {
+                    width: 100%;
+                    display: block !important;
+                }
+
+                    .app-search:active .app-form-inline input + button, .app-search:hover .app-form-inline input + button {
+                        position: absolute;
+                        color: rgb(42, 159, 214);
+                        padding-top: 6px;
+                        padding-bottom: 6px;
+                    }
 }
