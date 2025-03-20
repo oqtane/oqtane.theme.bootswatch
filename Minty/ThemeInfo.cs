@@ -9,7 +9,7 @@ namespace Oqtane.Theme.Bootswatch.Minty
         public Models.Theme Theme => new Models.Theme
         {
             Name = "Bootswatch Minty",
-            Version = "6.0.0",
+            Version = "6.0.1",
             ThemeSettingsType = "Oqtane.Theme.Bootswatch.ThemeSettings, Oqtane.Theme.Bootswatch.Oqtane",
             ContainerSettingsType = "Oqtane.Theme.Bootswatch.ContainerSettings, Oqtane.Theme.Bootswatch.Oqtane",
             PackageName = "Oqtane.Theme.Bootswatch",
