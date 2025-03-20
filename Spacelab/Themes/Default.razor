@@ -4,17 +4,3 @@
 @{ 
     base.BuildRenderTree(__builder); 
 }
-
-@code {
-
-    public override List<Resource> Resources => GetResources();
-
-    private List<Resource> GetResources()
-    {
-        var resources = base.Resources;
-        resources[0] = new Resource { ResourceType = ResourceType.Stylesheet, Url = "https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.0.2/spacelab/bootstrap.min.css", Integrity = "sha512-VlYW/FBl6HHyE7NyAQqT9x1cE3xdIXEYn6s8ckbTx9SGNu8P7Jve1EMa+DZty34NypAaRISbU5qzsansxNqfxg==", CrossOrigin = "anonymous" };
-        resources[1] = new Resource { ResourceType = ResourceType.Stylesheet, Url = ThemePath().Replace(".Spacelab/", "/Theme.css") };
-        resources[2] = new Resource { ResourceType = ResourceType.Stylesheet, Url = ThemePath().Replace(".Spacelab/", "/Spacelab.css") };
-        return resources;
-    }
-}

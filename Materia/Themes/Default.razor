@@ -5,16 +5,3 @@
     base.BuildRenderTree(__builder); 
 }
 
-@code {
-
-    public override List<Resource> Resources => GetResources();
-
-    private List<Resource> GetResources()
-    {
-        var resources = base.Resources;
-        resources[0] = new Resource { ResourceType = ResourceType.Stylesheet, Url = "https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.0.2/materia/bootstrap.min.css", Integrity = "sha512-lgjGHUJ8gespcWe81wqbY/6Kb8wyOes25otQkhbMllia1Shnc5E+RX+0JvucTKR9cA0F3q4LliKeeudfkhLJJg==", CrossOrigin = "anonymous" };
-        resources[1] = new Resource { ResourceType = ResourceType.Stylesheet, Url = ThemePath().Replace(".Materia/", "/Theme.css") };
-        resources[2] = new Resource { ResourceType = ResourceType.Stylesheet, Url = ThemePath().Replace(".Materia/", "/Materia.css") };
-        return resources;
-    }
-}

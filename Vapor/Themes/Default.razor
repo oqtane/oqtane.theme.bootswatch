@@ -5,16 +5,3 @@
     base.BuildRenderTree(__builder); 
 }
 
-@code {
-
-    public override List<Resource> Resources => GetResources();
-
-    private List<Resource> GetResources()
-    {
-        var resources = base.Resources;
-        resources[0] = new Resource { ResourceType = ResourceType.Stylesheet, Url = "https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.0.2/vapor/bootstrap.min.css", Integrity = "sha512-Pe0IO6obj0b/5liv3Z3x82jslhmZmItYrgzgPIW+qEOJLkPjMpLl8UwArhIOFlmQfATBCIPZWHffjjYTn0XT3A==", CrossOrigin = "anonymous" };
-        resources[1] = new Resource { ResourceType = ResourceType.Stylesheet, Url = ThemePath().Replace(".Vapor/", "/Theme.css") };
-        resources[2] = new Resource { ResourceType = ResourceType.Stylesheet, Url = ThemePath().Replace(".Vapor/", "/Vapor.css") };
-        return resources;
-    }
-}
