@@ -4,17 +4,3 @@
 @{ 
     base.BuildRenderTree(__builder); 
 }
-
-@code {
-
-    public override List<Resource> Resources => GetResources();
-
-    private List<Resource> GetResources()
-    {
-        var resources = base.Resources;
-        resources[0] = new Resource { ResourceType = ResourceType.Stylesheet, Url = "https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.0.2/zephyr/bootstrap.min.css", Integrity = "sha512-8AsrxJHNcfBjevT8jxlnbIcZKffcLoLyOymcu4F2ClBWIxgRJ3dNdRolabqSuAa6x4a2ujzzHkjFpmJBQP/74g==", CrossOrigin = "anonymous" };
-        resources[1] = new Resource { ResourceType = ResourceType.Stylesheet, Url = ThemePath().Replace(".Zephyr/", "/Theme.css") };
-        resources[2] = new Resource { ResourceType = ResourceType.Stylesheet, Url = ThemePath().Replace(".Zephyr/", "/Zephyr.css") };
-        return resources;
-    }
-}

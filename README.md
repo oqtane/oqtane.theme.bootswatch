@@ -1,7 +1,5 @@
 # Oqtane Bootswatch Theme Collection
 
-Oqtane allows developers to create themes which are rendered by the framework dynamically at run\-time. 
-
 These themes are based on Bootswatch \- https://bootswatch.com/
 
 A custom theme is comprised of razor components \- some which inherit from ThemeBase \(theme components\) and ContainerBase \(container components\).

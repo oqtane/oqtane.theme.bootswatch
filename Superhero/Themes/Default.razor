@@ -5,16 +5,3 @@
     base.BuildRenderTree(__builder); 
 }
 
-@code {
-
-    public override List<Resource> Resources => GetResources();
-
-    private List<Resource> GetResources()
-    {
-        var resources = base.Resources;
-        resources[0] = new Resource { ResourceType = ResourceType.Stylesheet, Url = "https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.0.2/superhero/bootstrap.min.css", Integrity = "sha512-DA2rI7d/CG3y/Nggp1ahshJkCs8+YH/t87DZ7tamF9rh8o6AuOW24giNAUnufu6hfikSBvE9Ctk7ebnG2U8wXg==", CrossOrigin = "anonymous" };
-        resources[1] = new Resource { ResourceType = ResourceType.Stylesheet, Url = ThemePath().Replace(".Superhero/", "/Theme.css") };
-        resources[2] = new Resource { ResourceType = ResourceType.Stylesheet, Url = ThemePath().Replace(".Superhero/", "/Superhero.css") };
-        return resources;
-    }
-}

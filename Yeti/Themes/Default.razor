@@ -5,16 +5,3 @@
     base.BuildRenderTree(__builder); 
 }
 
-@code {
-
-    public override List<Resource> Resources => GetResources();
-
-    private List<Resource> GetResources()
-    {
-        var resources = base.Resources;
-        resources[0] = new Resource { ResourceType = ResourceType.Stylesheet, Url = "https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.0.2/yeti/bootstrap.min.css", Integrity = "sha512-4lE2Ba9lTAUpXaE2cL4S9Ff/5gZqI+5OQ+gaj3ymmADard7acgJUKkZA1xU38/gX4OTzS8HCYqYH13+qyRCthQ==", CrossOrigin = "anonymous" };
-        resources[1] = new Resource { ResourceType = ResourceType.Stylesheet, Url = ThemePath().Replace(".Yeti/", "/Theme.css") };
-        resources[2] = new Resource { ResourceType = ResourceType.Stylesheet, Url = ThemePath().Replace(".Yeti/", "/Yeti.css") };
-        return resources;
-    }
-}

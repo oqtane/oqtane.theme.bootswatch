@@ -5,16 +5,3 @@
     base.BuildRenderTree(__builder);
 }
 
-@code {
-
-    public override List<Resource> Resources => GetResources();
-
-    private List<Resource> GetResources()
-    {
-        var resources = base.Resources;
-        resources[0] = new Resource { ResourceType = ResourceType.Stylesheet, Url = "https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.0.2/simplex/bootstrap.min.css", Integrity = "sha512-hDfCzDhww/JE+45O/cXfPGG7bBJ/0k6ui8wfwn/iGU7tIuXoReRskkvEvy8waAnM2nO5ezNiDNEmITviUxM9SQ==", CrossOrigin = "anonymous" };
-        resources[1] = new Resource { ResourceType = ResourceType.Stylesheet, Url = ThemePath().Replace(".Simplex/", "/Theme.css") };
-        resources[2] = new Resource { ResourceType = ResourceType.Stylesheet, Url = ThemePath().Replace(".Simplex/", "/Simplex.css") };
-        return resources;
-    }
-}
