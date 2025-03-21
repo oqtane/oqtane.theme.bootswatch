@@ -26,6 +26,7 @@
 @code {
     public override string Name => "Customizable Container";
 
+    private string _namespace = "Oqtane.Theme.Bootswatch";
     private bool _title = true;
     private string _classes = "container-fluid";
 
@@ -33,10 +34,10 @@
     {
         try
         {
-            _title = bool.Parse(SettingService.GetSetting(ModuleState.Settings, "Oqtane.Theme.Bootswatch:Title", "true"));
-            _classes += " " + SettingService.GetSetting(ModuleState.Settings, "Oqtane.Theme.Bootswatch:Background", "");
-            _classes += " " + SettingService.GetSetting(ModuleState.Settings, "Oqtane.Theme.Bootswatch:Text", "");
-            _classes += " " + SettingService.GetSetting(ModuleState.Settings, "Oqtane.Theme.Bootswatch:Border", "");
+            _title = bool.Parse(SettingService.GetSetting(ModuleState.Settings, _namespace + ":Title", "true"));
+            _classes += " " + SettingService.GetSetting(ModuleState.Settings, _namespace + ":Background", "");
+            _classes += " " + SettingService.GetSetting(ModuleState.Settings, _namespace + ":Text", "");
+            _classes += " " + SettingService.GetSetting(ModuleState.Settings, _namespace + ":Border", "");
             _classes = _classes.Trim();
         }
         catch

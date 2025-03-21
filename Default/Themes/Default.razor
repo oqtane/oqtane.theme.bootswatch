@@ -2,7 +2,7 @@
 @inherits ThemeBase
 @inject ISettingService SettingService
 
-<main role="main">
+<main role="main" data-bs-theme="@_mode">
     <nav class="navbar navbar-dark bg-primary fixed-top">
         <Logo UseSiteNameAsFallback="true" /><Menu Orientation="Horizontal" />
         <div class="controls ms-auto">
@@ -106,15 +106,19 @@
     public override string Name => "Default Theme";
 
     public override string Panes => PaneNames.Default + ",Top Full Width,Top 100%,Left 50%,Right 50%,Left 33%,Center 33%,Right 33%,Left Outer 25%,Left Inner 25%,Right Inner 25%,Right Outer 25%,Left 25%,Center 50%,Right 25%,Left Sidebar 66%,Right Sidebar 33%,Left Sidebar 33%,Right Sidebar 66%,Bottom 100%,Bottom Full Width,Footer";
+
+    private string _namespace = "Oqtane.Theme.Bootswatch";
     private bool _login = true;
     private bool _register = true;
+    private string _mode = "";
 
     protected override void OnParametersSet()
     {
         try
         {
-            _login = bool.Parse(SettingService.GetSetting(PageState.Site.Settings, GetType().Namespace + ":Login", "true"));
-            _register = bool.Parse(SettingService.GetSetting(PageState.Site.Settings, GetType().Namespace + ":Register", "true"));
+            _login = bool.Parse(SettingService.GetSetting(PageState.Site.Settings, _namespace + ":Login", "true"));
+            _register = bool.Parse(SettingService.GetSetting(PageState.Site.Settings, _namespace + ":Register", "true"));
+            _mode = SettingService.GetSetting(PageState.Site.Settings, _namespace + ":Mode", "light");
         }
         catch
         {
