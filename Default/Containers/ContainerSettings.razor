@@ -74,6 +74,7 @@
 </table>
 
 @code {
+    private string _namespace = "Oqtane.Theme.Bootswatch";
     private string _title = "true";
     private string _background = "";
     private string _text = "";
@@ -83,10 +84,10 @@
     {
         try
         {
-            _title = SettingService.GetSetting(ModuleState.Settings, "Oqtane.Theme.Bootswatch:Title", "true");
-            _background = SettingService.GetSetting(ModuleState.Settings, "Oqtane.Theme.Bootswatch:Background", "");
-            _text = SettingService.GetSetting(ModuleState.Settings, "Oqtane.Theme.Bootswatch:Text", "");
-            _border = SettingService.GetSetting(ModuleState.Settings, "Oqtane.Theme.Bootswatch:Border", "");
+            _title = SettingService.GetSetting(ModuleState.Settings, _namespace + ":Title", "true");
+            _background = SettingService.GetSetting(ModuleState.Settings, _namespace + ":Background", "");
+            _text = SettingService.GetSetting(ModuleState.Settings, _namespace + ":Text", "");
+            _border = SettingService.GetSetting(ModuleState.Settings, _namespace + ":Border", "");
         }
         catch (Exception ex)
         {
@@ -99,10 +100,10 @@
         try
         {
             var settings = ModuleState.Settings;
-            settings = SettingService.SetSetting(settings, "Oqtane.Theme.Bootswatch:Title", _title);
-            settings = SettingService.SetSetting(settings, "Oqtane.Theme.Bootswatch:Background", _background);
-            settings = SettingService.SetSetting(settings, "Oqtane.Theme.Bootswatch:Text", _text);
-            settings = SettingService.SetSetting(settings, "Oqtane.Theme.Bootswatch:Border", _border);
+            settings = SettingService.SetSetting(settings, _namespace + ":Title", _title);
+            settings = SettingService.SetSetting(settings, _namespace + ":Background", _background);
+            settings = SettingService.SetSetting(settings, _namespace + ":Text", _text);
+            settings = SettingService.SetSetting(settings, _namespace + ":Border", _border);
             await SettingService.UpdateModuleSettingsAsync(settings, ModuleState.ModuleId);
         }
         catch (Exception ex)

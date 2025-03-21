@@ -8,7 +8,7 @@
 
 <div class="container">
     <div class="row mb-1 align-items-center">
-        <Label Class="col-sm-3" For="login" ResourceKey="Login" ResourceType="@resourceType" HelpText="Specify if a Login option should be displayed. Note that this option does not prevent the login page from being accessible via a direct url.">Show Login?</Label>
+        <Label Class="col-sm-3" For="login" ResourceKey="Login" ResourceType="@_resourceType" HelpText="Specify if a Login option should be displayed. Note that this option does not prevent the login page from being accessible via a direct url.">Show Login?</Label>
         <div class="col-sm-9">
             <select id="login" class="form-select" @bind="@_login">
                 <option value="-">&lt;@SharedLocalizer["Not Specified"]&gt;</option>
@@ -18,7 +18,7 @@
         </div>
     </div>
     <div class="row mb-1 align-items-center">
-        <Label Class="col-sm-3" For="register" ResourceKey="Register" ResourceType="@resourceType" HelpText="Specify if a Register option should be displayed. Note that this option is also dependent on the Allow Registration option in Site Settings.">Show Register?</Label>
+        <Label Class="col-sm-3" For="register" ResourceKey="Register" ResourceType="@_resourceType" HelpText="Specify if a Register option should be displayed. Note that this option is also dependent on the Allow Registration option in Site Settings.">Show Register?</Label>
         <div class="col-sm-9">
             <select id="register" class="form-select" @bind="@_register">
                 <option value="-">&lt;@SharedLocalizer["Not Specified"]&gt;</option>
@@ -27,12 +27,24 @@
             </select>
         </div>
     </div>
+    <div class="row mb-1 align-items-center">
+        <Label Class="col-sm-3" For="mode" ResourceKey="Mode" ResourceType="@_resourceType" HelpText="Specify the Bootstrap theme mode">Mode:</Label>
+        <div class="col-sm-9">
+            <select id="mode" class="form-select" @bind="@_mode">
+                <option value="light">@SharedLocalizer["Light"]</option>
+                <option value="dark">@SharedLocalizer["Dark"]</option>
+            </select>
+        </div>
+    </div>
 </div>
 
 @code {
-    private string resourceType = "Oqtane.Themes.OqtaneTheme.ThemeSettings, Oqtane.Client"; // for localization
+    private string _resourceType = "Oqtane.Theme.Bootswatch.ThemeSettings, Oqtane.Theme.Bootswatch.Oqtane"; // for localization
+    private string _namespace = "Oqtane.Theme.Bootswatch";
+
     private string _login = "-";
     private string _register = "-";
+    private string _mode = "";
 
     protected override async Task OnInitializedAsync()
     {
@@ -49,9 +61,9 @@
 
     private async Task LoadSettings()
     {
-        var settings = PageState.Site.Settings;
-        _login = SettingService.GetSetting(settings, GetType().Namespace + ":Login", "true");
-        _register = SettingService.GetSetting(settings, GetType().Namespace + ":Register", "true");
+        _login = SettingService.GetSetting(PageState.Site.Settings, _namespace + ":Login", "true");
+        _register = SettingService.GetSetting(PageState.Site.Settings, _namespace + ":Register", "true");
+        _mode = SettingService.GetSetting(PageState.Site.Settings, _namespace + ":Mode", "light");
         await Task.Yield();
     }
 
@@ -62,12 +74,14 @@
             var settings = await SettingService.GetSiteSettingsAsync(PageState.Site.SiteId);
             if (_login != "-")
             {
-                settings = SettingService.SetSetting(settings, GetType().Namespace + ":Login", _login);
+                settings = SettingService.SetSetting(settings, _namespace + ":Login", _login);
             }
             if (_register != "-")
             {
-                settings = SettingService.SetSetting(settings, GetType().Namespace + ":Register", _register);
+                settings = SettingService.SetSetting(settings, _namespace + ":Register", _register);
             }
+            settings = SettingService.SetSetting(settings, _namespace + ":Mode", _mode);
+            await SettingService.UpdateSiteSettingsAsync(settings, PageState.Site.SiteId);
         }
         catch (Exception ex)
         {
