@@ -99,7 +99,7 @@
     {
         try
         {
-            var settings = ModuleState.Settings;
+            var settings = await SettingService.GetModuleSettingsAsync(ModuleState.ModuleId);
             settings = SettingService.SetSetting(settings, _namespace + ":Title", _title);
             settings = SettingService.SetSetting(settings, _namespace + ":Background", _background);
             settings = SettingService.SetSetting(settings, _namespace + ":Text", _text);
