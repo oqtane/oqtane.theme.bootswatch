@@ -9,7 +9,7 @@ namespace Oqtane.Theme.Bootswatch.Lux
         public Models.Theme Theme => new Models.Theme
         {
             Name = "Bootswatch Lux",
-            Version = "6.1.2",
+            Version = "6.1.3",
             ThemeSettingsType = "Oqtane.Theme.Bootswatch.ThemeSettings, Oqtane.Theme.Bootswatch.Oqtane",
             ContainerSettingsType = "Oqtane.Theme.Bootswatch.ContainerSettings, Oqtane.Theme.Bootswatch.Oqtane",
             PackageName = "Oqtane.Theme.Bootswatch",
