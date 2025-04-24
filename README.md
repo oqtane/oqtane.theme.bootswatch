@@ -1,3 +1,7 @@
+# Latest Release
+
+[6.1.2](https://github.com/oqtane/oqtane.theme.bootswatch/releases/tag/v6.1.2) was released on Apr 10, 2025.
+
 # Oqtane Bootswatch Theme Collection
 
 These themes are based on Bootswatch \- https://bootswatch.com/
