@@ -28,9 +28,4 @@
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
   </PropertyGroup>
 
-  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="IF $(ConfigurationName) == Debug (debug.cmd)" />
-    <Exec Command="IF $(ConfigurationName) == Release (release.cmd)" />
-  </Target>
-
 </Project>
