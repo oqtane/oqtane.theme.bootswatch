@@ -18,7 +18,7 @@ namespace Oqtane.Theme.Bootswatch.Superhero
 		        // obtained from https://cdnjs.com/libraries
                 new Stylesheet("https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.3.3/superhero/bootstrap.min.css", "sha512-yeFVFyLRIY48erNjFZ1uXiERPXN8izq4mBNe4iSgVYT0bq/ZiSsWwTlaSObBDeqR/+7MBw1g23iSpI9ru/qtGQ==", "anonymous"),
                 new Stylesheet("Themes/Oqtane.Theme.Bootswatch/Theme.css"),
-                new Stylesheet("Themes/Oqtane.Theme.Bootswatch/Cerulean.css"),
+                new Stylesheet("Themes/Oqtane.Theme.Bootswatch/Superhero.css"),
                 new Script("https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js", "sha512-7Pi/otdlbbCR+LnW+F7PwFcSDJOuUJB3OxtEHbg4vSMvzvJjde4Po1v4BR9Gdc9aXNUNFVUY+SK51wWT8WF0Gg==", "anonymous")
             }
         };
