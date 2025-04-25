@@ -18,7 +18,7 @@ namespace Oqtane.Theme.Bootswatch.Minty
 		        // obtained from https://cdnjs.com/libraries
                 new Stylesheet("https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.3.3/minty/bootstrap.min.css", "sha512-+/uDiVv4ZLhHnXToJFPwYK08kkG2et1rSuiitOl+0hdzmx2N6HQaMqm/7ORzr8dhco+cyGZCRxkXU7EMMYOLfQ==", "anonymous"),
                 new Stylesheet("Themes/Oqtane.Theme.Bootswatch/Theme.css"),
-                new Stylesheet("Themes/Oqtane.Theme.Bootswatch/Cerulean.css"),
+                new Stylesheet("Themes/Oqtane.Theme.Bootswatch/Minty.css"),
                 new Script("https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js", "sha512-7Pi/otdlbbCR+LnW+F7PwFcSDJOuUJB3OxtEHbg4vSMvzvJjde4Po1v4BR9Gdc9aXNUNFVUY+SK51wWT8WF0Gg==", "anonymous")
             }
         };
