@@ -11,7 +11,7 @@
                 {
                     <Search CssClass="me-3 text-center bg-primary" />
                 }
-                <UserProfile ShowRegister="@_register" RegisterUrl="@_registerurl" ProfileUrl="@_profileurl" />
+                <UserProfile ShowRegister="@_register" />
                 <Login ShowLogin="@_login" />
                 <ControlPanel LanguageDropdownAlignment="right" />
             </div>
@@ -113,8 +113,6 @@
     private string _namespace = "Oqtane.Theme.Bootswatch";
     private bool _login = true;
     private bool _register = true;
-    private string _registerurl = "";
-    private string _profileurl = "";
     private bool _search = true;
     private string _mode = "";
 
@@ -124,8 +122,6 @@
         {
             _login = bool.Parse(SettingService.GetSetting(PageState.Site.Settings, _namespace + ":Login", "true"));
             _register = bool.Parse(SettingService.GetSetting(PageState.Site.Settings, _namespace + ":Register", "true"));
-            _registerurl = SettingService.GetSetting(PageState.Site.Settings, _namespace + ":RegisterUrl", "");
-            _profileurl = SettingService.GetSetting(PageState.Site.Settings, _namespace + ":ProfileUrl", "");
             _search = bool.Parse(SettingService.GetSetting(PageState.Site.Settings, _namespace + ":Search", "true"));
             _mode = SettingService.GetSetting(PageState.Site.Settings, _namespace + ":Mode", "light");
         }
