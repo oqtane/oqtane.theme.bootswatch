@@ -25,21 +25,6 @@
             </select>
         </div>
     </div>
-    @if (_register == "true")
-    {
-        <div class="row mb-1 align-items-center">
-            <Label Class="col-sm-3" For="registerurl" HelpText="Optionally provide a custom registration url. Note that this option is also dependent on the Allow Registration option in Site Settings." ResourceKey="RegisterUrl">Register Url:</Label>
-            <div class="col-sm-9">
-                <input id="registerurl" class="form-control" @bind="@_registerurl" />
-            </div>
-        </div>
-        <div class="row mb-1 align-items-center">
-            <Label Class="col-sm-3" For="profileurl" HelpText="Optionally provide a custom profile url" ResourceKey="ProfileUrl">Profile Url:</Label>
-            <div class="col-sm-9">
-                <input id="profileurl" class="form-control" @bind="@_profileurl" />
-            </div>
-        </div>
-    }
     <div class="row mb-1 align-items-center">
         <Label Class="col-sm-3" For="search" ResourceKey="Search" ResourceType="@_resourceType" HelpText="Specify if a search icon should be displayed">Show Search?</Label>
         <div class="col-sm-9">
@@ -66,8 +51,6 @@
 
     private string _login = "true";
     private string _register = "true";
-    private string _registerurl = "";
-    private string _profileurl = "";
     private string _search = "true";
     private string _mode = "";
 
@@ -88,8 +71,6 @@
     {
         _login = SettingService.GetSetting(PageState.Site.Settings, _namespace + ":Login", "true");
         _register = SettingService.GetSetting(PageState.Site.Settings, _namespace + ":Register", "true");
-        _registerurl = SettingService.GetSetting(PageState.Site.Settings, _namespace + ":RegisterUrl", "");
-        _profileurl = SettingService.GetSetting(PageState.Site.Settings, _namespace + ":ProfileUrl", "");
         _search = SettingService.GetSetting(PageState.Site.Settings, _namespace + ":Search", "true");
         _mode = SettingService.GetSetting(PageState.Site.Settings, _namespace + ":Mode", "light");
         await Task.Yield();
@@ -102,8 +83,6 @@
             var settings = await SettingService.GetSiteSettingsAsync(PageState.Site.SiteId);
             settings = SettingService.SetSetting(settings, _namespace + ":Login", _login);
             settings = SettingService.SetSetting(settings, _namespace + ":Register", _register);
-            settings = SettingService.SetSetting(settings, _namespace + ":RegisterUrl", _registerurl);
-            settings = SettingService.SetSetting(settings, _namespace + ":ProfileUrl", _profileurl);
             settings = SettingService.SetSetting(settings, _namespace + ":Search", _search);
             settings = SettingService.SetSetting(settings, _namespace + ":Mode", _mode);
             await SettingService.UpdateSiteSettingsAsync(settings, PageState.Site.SiteId);
