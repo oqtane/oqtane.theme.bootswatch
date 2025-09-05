@@ -9,7 +9,7 @@ namespace Oqtane.Theme.Bootswatch.Solar
         public Models.Theme Theme => new Models.Theme
         {
             Name = "Bootswatch Solar",
-            Version = "6.1.4",
+            Version = "6.1.5",
             ThemeSettingsType = "Oqtane.Theme.Bootswatch.ThemeSettings, Oqtane.Theme.Bootswatch.Oqtane",
             ContainerSettingsType = "Oqtane.Theme.Bootswatch.ContainerSettings, Oqtane.Theme.Bootswatch.Oqtane",
             PackageName = "Oqtane.Theme.Bootswatch",

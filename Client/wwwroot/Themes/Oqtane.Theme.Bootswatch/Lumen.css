@@ -35,15 +35,6 @@ main {
     }
 }
 
-.app-logo {
-    margin-right: 0.5rem;
-}
-
-.app-logo img.img-fluid {
-    max-width: 180px;
-    max-height: 75px;
-}
-
 .btn-primary {
     background-color: var(--bs-primary);
     color: var(--bs-white);
