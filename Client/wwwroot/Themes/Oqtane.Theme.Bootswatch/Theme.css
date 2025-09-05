@@ -1,7 +1,7 @@
 /* Oqtane Styles
-    * This file contains custom styles for the Oqtane framework themes.
-    * It includes overrides for various components and responsive design adjustments.
-    */
+ * This file contains custom styles for the Oqtane framework themes.
+ * It includes overrides for various components and responsive design adjustments.
+ */
 
 .table > :not(caption) > * > * {
   box-shadow: none;
@@ -41,9 +41,9 @@
 }
 
 @media (max-width: 768px) {
-  .app-logo img.img-fluid {
-    max-width: 180px;
+  .app-logo .img-fluid {
     max-height: 75px;
+    padding: 0 5px 0 5px;
   }
 }
 
@@ -79,10 +79,6 @@
   top: -2px;
 }
 
-/* .app-search input {
-    width: auto;
-} */
-
 .navbar-toggler {
   background-color: rgba(255, 255, 255, 0.1);
   margin: 0.5rem;
@@ -100,56 +96,7 @@ div.app-moduleactions div.dropdown-menu {
   color: #ffffff;
   z-index: 1000;
 }
-@media (max-width: 991.98px) {
-  /* .app-search {
-        border-radius: 6px;
-    }
-    .app-search input {
-        display: none !important;
-    }
 
-    .app-search input + button {
-        position: initial;
-        padding-top: 7px;
-        padding-bottom: 7px;
-    }
-
-    .app-search:active,
-    .app-search:hover {
-        display: block;
-        position: fixed;
-        top: 0;
-        min-height: 96px;
-        width: 100%;
-        left: 0;
-        z-index: 999;
-        border-radius: 0;
-    } 
-
-    .app-search:active .app-form-inline,
-    .app-search:hover .app-form-inline {
-        margin: 10px auto;
-        position: relative;
-        display: block;
-        max-width: 80%;
-    }
-
-    .app-search:active .app-form-inline input,
-    .app-search:hover .app-form-inline input {
-        width: 100%;
-        display: block !important;
-    }
-    .app-search:active .app-form-inline input + button,
-    .app-search:hover .app-form-inline input + button {
-        position: absolute;
-        color: rgb(42, 159, 214);
-        padding-top: 6px;
-        padding-bottom: 6px;
-    } 
-    .btn.btn-search {
-        color: var(--bs-white);
-    }*/
-}
 @media (max-width: 767.98px) {
   .app-menu {
     width: 100%;
@@ -179,12 +126,7 @@ div.app-moduleactions div.dropdown-menu {
     position: relative;
     top: 60px;
   }
-  /* .app-search:active,
-    .app-search:hover {
-        min-height: 60px;
-    } */
 }
-*/
 
 /* CSS overrides */
 
@@ -211,9 +153,9 @@ main {
   padding-left: 8px;
 }
 
-.app-logo {
-  max-width: 180px;
-  max-height: 75px;
+.app-logo .img-fluid {
+    max-height: 75px;
+    padding: 0 5px 0 5px;
 }
 
 .controls-group {

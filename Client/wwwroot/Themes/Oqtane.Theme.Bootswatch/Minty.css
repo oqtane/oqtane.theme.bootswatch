@@ -29,15 +29,6 @@ main {
     padding-left: 8px;
 }
 
-.app-logo {
-    margin-right: 0.5rem;
-}
-
-.app-logo img.img-fluid {
-    max-width: 180px;
-    max-height: 75px;
-}
-
 .controls-group {
     display: flex;
     gap: 10px;
