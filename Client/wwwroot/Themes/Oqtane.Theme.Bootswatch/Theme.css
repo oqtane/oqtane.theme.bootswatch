@@ -84,11 +84,6 @@
   margin: 0.5rem;
 }
 
-div.app-moduleactions a.dropdown-toggle,
-div.app-moduleactions div.dropdown-menu {
-  color: #ffffff;
-}
-
 .footer {
   padding-top: 15px;
   min-height: 40px;

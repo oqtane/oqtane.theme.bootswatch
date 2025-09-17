@@ -9,7 +9,7 @@ namespace Oqtane.Theme.Bootswatch.Materia
         public Models.Theme Theme => new Models.Theme
         {
             Name = "Bootswatch Materia",
-            Version = "6.1.5",
+            Version = "6.1.6",
             ThemeSettingsType = "Oqtane.Theme.Bootswatch.ThemeSettings, Oqtane.Theme.Bootswatch.Oqtane",
             ContainerSettingsType = "Oqtane.Theme.Bootswatch.ContainerSettings, Oqtane.Theme.Bootswatch.Oqtane",
             PackageName = "Oqtane.Theme.Bootswatch",
