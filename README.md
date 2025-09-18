@@ -1,6 +1,6 @@
 # Latest Release
 
-[6.1.3](https://github.com/oqtane/oqtane.theme.bootswatch/releases/tag/v6.1.3) was released on Apr 24, 2025.
+[6.1.6](https://github.com/oqtane/oqtane.theme.bootswatch/releases/tag/v6.1.6) was released on Sep 18, 2025.
 
 # Oqtane Bootswatch Theme Collection
 
